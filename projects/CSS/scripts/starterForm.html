@@ -48,6 +48,22 @@ form div{
     margin-bottom: 10px;
 }
 
+.submit-row{
+    text-align: center;
+}
+
+.submit-row button {
+    border: none;
+    padding: 8px 15px 8px 15px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+}
+
+.submit-row button:hover {
+    background: #EA7B00;
+}
 </style>
 
 <form>
@@ -73,7 +89,7 @@ form div{
         <label for="comments">Comments</label>
         <textarea id="comments" name="comments"></textarea>
     </div>
-    <div>
+    <div class="submit-row">
         <button>Submit</button>
     </div>
 </form> 
