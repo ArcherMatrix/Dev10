@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adjacent Sibling</title>
+	<style>
+		.disclaimer + p {
+			color: red
+		}
+	</style>
+  </head>
+  <body>
+		<p>Not red colored</p>
+
+		<div class="disclaimer">
+			<p>Not red colored.</p>
+			<div>
+				<p>Not red colored.</p>
+			</div>
+		</div>
+
+		<p>This content would be red colored. It is adjacent to the disclaimer class element.</p>
+		<p>Not red colored. Same level but not adjacent.</p>
+  </body>
+</html>

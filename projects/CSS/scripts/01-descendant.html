@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Descendant Selector</title>
+	<style>
+		.disclaimer p {
+			color: red
+		}
+	</style>
+  </head>
+  <body>
+		<div class="disclaimer">
+			<p>This content would be red colored.</p>
+			<div>
+				<p>This content would also be red colored, since it is a descendant of the disclaimer element.</p>
+			</div>
+		</div>
+
+		<p>This content would not be red colored.</p>
+  </body>
+</html>
