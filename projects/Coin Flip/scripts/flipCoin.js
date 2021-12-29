@@ -1,11 +1,26 @@
+function resultParagraph(result)
+{
+    let resultP = document.querySelector(".results");
+    let oldP = document.getElementById("resultP");
+    //console.log(oldP);
+    if(oldP!=null)
+    {
+        resultP.removeChild(oldP);
+    }
+    let newNode =document.createElement("p");
+    newNode.innerHTML = result;
+    newNode.id = "resultP";
+    resultP.appendChild(newNode);
+}
+
 function flipCoin(id)
 {
     let choice = document.getElementById(id);
     //console.log(choice.innerText);
 
-    let result = Math.floor(Math.random()*2);
+    let flip = Math.floor(Math.random()*2);
     let pick;
-    switch(result)
+    switch(flip)
     {
         case 0:
             pick = "Heads";
@@ -22,17 +37,11 @@ function flipCoin(id)
     if(choice.innerText == pick)
     {
         //console.log("correct");
-        let resultP = document.querySelector(".results");
-        let newNode =document.createElement("p");
-        newNode.innerHTML = "You are correct!";
-        resultP.appendChild(newNode);
+        resultParagraph("You are correct!");
     }
     else
     {
         //console.log("incorrect");
-        let resultP = document.querySelector(".results");
-        let newNode =document.createElement("p");
-        newNode.innerHTML = "You are incorrect!";
-        resultP.appendChild(newNode);
+        resultParagraph("You are incorrect!");
     }
 };
