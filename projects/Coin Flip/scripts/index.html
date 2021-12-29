@@ -7,6 +7,7 @@
 
 <body>
     <div>
+        <script src = "flipCoin.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -15,8 +16,8 @@
     <h1>Coin Flip</h1>
 
     <p>Let's flip a coin! Choose heads or tails:</p>
-    <form action="flipCoin.js">
-        <button type="submit" id = "Heads" name = choice>Heads</button>
-        <button type="submit" id = "Tails" name = choice>Tails</button>
-    </form>
+    
+    <button type="button" id = "Heads" value = "heads" onclick="flipCoin(this.id)">Heads</button>
+    <button type ="button" id = "Tails" value = "tails" onclick="flipCoin(this.id)">Tails</button>
+  
 </body>
