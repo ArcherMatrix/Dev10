@@ -37,11 +37,11 @@ function flipCoin(id)
     if(choice.innerText == pick)
     {
         //console.log("correct");
-        resultParagraph(`You chose: ${choice.innerText}<br> CPU chose:${pick}<br> Good Guess!`);
+        resultParagraph(`You chose: ${choice.innerText}<br> CPU chose: ${pick}<br> Good Guess!`);
     }
     else
     {
         //console.log("incorrect");
-        resultParagraph(`You chose: ${choice.innerText}<br> CPU chose:${pick}<br> Better Luck Next Time!`);
+        resultParagraph(`You chose: ${choice.innerText}<br> CPU chose: ${pick}<br> Better Luck Next Time!`);
     }
 };
