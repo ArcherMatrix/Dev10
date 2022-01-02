@@ -48,7 +48,15 @@ function checkValue()
         if(input==rand)
         {
             //console.log("You got it!");
-            resultParagraph(`You got it! It took you ${guesses.length} tries and your guesses were ${guesses}.`,1);
+            if (guesses.length==1)
+            {
+                resultParagraph(`You got it! It took you ${guesses.length} try and your guess was ${guesses}.`,1);
+            }
+            else
+            {
+                resultParagraph(`You got it! It took you ${guesses.length} tries and your guesses were ${guesses}.`,1);
+            }
+            
         }
         else if(input<rand)
         {
