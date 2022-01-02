@@ -1,3 +1,4 @@
+let guesses = [];
 let max = prompt("Enter the highest value");
 if(isNaN(max)||max===""||max === null)
 {
@@ -32,16 +33,19 @@ function checkValue()
     else if(input==rand)
     {
         //console.log("You got it!");
-        resultParagraph("You got it!",1);
+        guesses.push(input);
+        resultParagraph(`You got it! It took you ${guesses.length} tries and your guesses were ${guesses}.`,1);
     }
     else if(input<rand)
     {
         //console.log("No, try a higher number.");
+        guesses.push(input);
         resultParagraph("No, try a higher number.",2);
     }
     else if(input>rand)
     {
         //console.log("No, try a lower number.");
+        guesses.push(input);
         resultParagraph("No, try a lower number.",3);
     }
     else
