@@ -28,3 +28,7 @@ label {
 .guessButton:hover{
     background: #000000;
 }
+.guessButton:active
+{
+    background: #099ef5;
+}
