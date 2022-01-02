@@ -50,6 +50,7 @@ function checkValue()
             //console.log("You got it!");
             if (guesses.length==1)
             {
+                //If the user guesses on the first try.
                 resultParagraph(`You got it! It took you ${guesses.length} try and your guess was ${guesses}.`,1);
             }
             else
