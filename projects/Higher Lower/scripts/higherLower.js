@@ -1,4 +1,19 @@
-let rand = Math.floor(Math.random()*20)+1;
+let max = prompt("Enter the highest value");
+if(isNaN(max)||max===""||max === null)
+{
+    alert("Entered value is not a valid number.");
+    location.reload();
+}
+else
+{
+    let instruction = document.querySelector(".instruction");
+    let newP = document.createElement("p");
+    newP.innerHTML = `Guess a number between 1 and ${max}.`; 
+    instruction.appendChild(newP);
+}
+
+
+let rand = Math.floor(Math.random()*max)+1;
 
 console.log(rand);
 
@@ -6,7 +21,15 @@ function checkValue()
 {
     let input = document.getElementById('guessBox').value;
 
-    if(input==rand)
+    if(isNaN(input)||input===""||input === null)
+    {
+        alert("Entered value is not a valid number.");
+    }
+    else if(input<0||input>max)
+    {
+        alert("Entered value is not in range, try again.");
+    }
+    else if(input==rand)
     {
         //console.log("You got it!");
         resultParagraph("You got it!",1);
@@ -21,7 +44,12 @@ function checkValue()
         //console.log("No, try a lower number.");
         resultParagraph("No, try a lower number.",3);
     }
+    else
+    {
+        console.log("Error");
+    }
 }
+
 function resultParagraph(result,flag)
 {
     let resultP = document.querySelector(".results");
